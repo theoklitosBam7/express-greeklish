@@ -1,4 +1,5 @@
 import express from 'express';
+import { router } from './routes';
 
 function start() {
   if (!process.env.NODE_ENV || !process.env.PORT) {
@@ -20,6 +21,8 @@ function start() {
   app.use(express.static(www));
   console.log(`serving ${www}`);
 
+  app.use('/api', router);
+
   app.get('*', (req, res) => {
     res.sendFile('index.html', { root: www });
   });
@@ -27,4 +30,3 @@ function start() {
 }
 
 export { start };
-
