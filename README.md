@@ -55,9 +55,7 @@ Response:
   "input": "Euhxo: autw pou akougetai wrea.",
   "output": "Εύηχο: αυτό που ακούγεται ωραία.",
   "corrected": true,
-  "tokens": [
-    { "index": 0, "input": "Εύηχο:", "output": "Εύηχο:", "corrected": false }
-  ],
+  "tokens": [{ "index": 0, "input": "Εύηχο:", "output": "Εύηχο:", "corrected": false }],
   "warnings": [],
   "meta": {
     "elapsedMs": 4.11,
@@ -95,7 +93,7 @@ curl -sS \
 const response = await fetch('http://localhost:7070/api/v1/convert', {
   method: 'POST',
   headers: { 'content-type': 'application/json' },
-  body: JSON.stringify({ text: 'Euhxo: autw pou akougetai wrea.' })
+  body: JSON.stringify({ text: 'Euhxo: autw pou akougetai wrea.' }),
 });
 
 const data = await response.json();
@@ -108,7 +106,7 @@ console.log(data.output);
 import axios from 'axios';
 
 const { data } = await axios.post('http://localhost:7070/api/v1/convert', {
-  text: 'Euhxo: autw pou akougetai wrea.'
+  text: 'Euhxo: autw pou akougetai wrea.',
 });
 
 console.log(data.output);

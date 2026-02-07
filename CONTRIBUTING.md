@@ -59,7 +59,7 @@ Example:
 
 ```md
 ---
-"express-greeklish": minor
+'express-greeklish': minor
 ---
 
 feat(api): add v1 convert endpoint with metadata

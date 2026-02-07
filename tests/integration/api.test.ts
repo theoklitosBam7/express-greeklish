@@ -8,9 +8,7 @@ describeIntegration('API Integration', () => {
   it('GET /api/greeklish remains backward compatible', async () => {
     const app = createApp();
 
-    const response = await request(app)
-      .get('/api/greeklish')
-      .query({ text: 'Euhxo: autw pou akougetai wrea.' });
+    const response = await request(app).get('/api/greeklish').query({ text: 'Euhxo: autw pou akougetai wrea.' });
 
     expect(response.status).toBe(200);
     expect(typeof response.headers['x-request-id']).toBe('string');

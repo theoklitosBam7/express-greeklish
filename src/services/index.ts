@@ -1,1 +1,1 @@
-export { greeklishService } from "./greeklish.service";
+export { greeklishService } from './greeklish.service';

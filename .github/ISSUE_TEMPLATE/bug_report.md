@@ -1,9 +1,9 @@
 ---
 name: Bug report
 about: Report a defect in conversion quality or API behavior
-title: "[Bug] "
+title: '[Bug] '
 labels: bug
-assignees: ""
+assignees: ''
 ---
 
 ## Summary

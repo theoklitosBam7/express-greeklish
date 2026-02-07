@@ -28,7 +28,9 @@
     "test:watch": "vitest",
     "typecheck": "tsc --noEmit -p tsconfig.json",
     "benchmark": "node --import tsx scripts/benchmark.ts",
-    "clean": "rm -rf dist coverage"
+    "clean": "rm -rf dist coverage",
+    "format": "prettier --write .",
+    "format:check": "prettier --check ."
   },
   "_moduleAliases": {
     "@": "dist/src"
@@ -46,10 +48,22 @@
     "@types/node": "^22.19.9",
     "@types/supertest": "^6.0.3",
     "module-alias": "^2.3.4",
+    "prettier": "^3.8.1",
     "supertest": "^7.2.2",
     "tsx": "^4.21.0",
     "typescript": "~5.9.3",
     "vitest": "^4.0.18"
+  },
+  "prettier": {
+    "semi": true,
+    "trailingComma": "es5",
+    "singleQuote": true,
+    "printWidth": 120,
+    "tabWidth": 2,
+    "useTabs": false,
+    "bracketSpacing": true,
+    "arrowParens": "avoid",
+    "endOfLine": "lf"
   },
   "packageManager": "pnpm@10.28.2+sha512.41872f037ad22f7348e3b1debbaf7e867cfd448f2726d9cf74c08f19507c31d2c8e7a11525b983febc2df640b5438dee6023ebb1f84ed43cc2d654d2bc326264"
 }
