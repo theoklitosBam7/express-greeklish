@@ -1,7 +1,7 @@
-import fs from 'node:fs';
-import path from 'node:path';
 import * as greekUtils from 'greek-utils';
 import Spellchecker from 'hunspell-spellchecker';
+import fs from 'node:fs';
+import path from 'node:path';
 
 type SpellcheckerDictionary = ReturnType<Spellchecker['parse']>;
 
@@ -45,10 +45,7 @@ const LEADING_NON_WORD_REGEX = /^[^\p{L}\p{N}]+/u;
 const TRAILING_NON_WORD_REGEX = /[^\p{L}\p{N}]+$/u;
 
 const resolveDictionaryDir = (): string => {
-  const candidates = [
-    path.resolve(process.cwd(), 'src/assets'),
-    path.resolve(__dirname, '../assets'),
-  ];
+  const candidates = [path.resolve(process.cwd(), 'src/assets'), path.resolve(__dirname, '@/assets')];
 
   for (const candidate of candidates) {
     const affPath = path.resolve(candidate, 'el_GR.aff');
@@ -176,8 +173,8 @@ class GreeklishService {
       });
     }
 
-    const output = tokenResults.map((token) => token.output).join(' ');
-    const corrected = tokenResults.some((token) => token.corrected);
+    const output = tokenResults.map(token => token.output).join(' ');
+    const corrected = tokenResults.some(token => token.corrected);
 
     return {
       output,

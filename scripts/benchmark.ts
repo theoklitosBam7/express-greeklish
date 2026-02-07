@@ -1,5 +1,5 @@
-import { createApp } from '../src/app';
-import { greeklishService } from '../src/services';
+import { createApp } from '@/app';
+import { greeklishService } from '@/services';
 
 type BenchmarkOptions = {
   iterations: number;
@@ -131,8 +131,7 @@ const runHttpBenchmark = async (options: BenchmarkOptions): Promise<boolean> => 
 
 const iterations = parseInteger(process.env.BENCH_ITERATIONS, 40);
 const concurrency = parseInteger(process.env.BENCH_CONCURRENCY, 4);
-const text =
-  process.env.BENCH_TEXT ?? 'Euhxo: autw pou akougetai wrea. H glwssa thelei poiotita.';
+const text = process.env.BENCH_TEXT ?? 'Euhxo: autw pou akougetai wrea. H glwssa thelei poiotita.';
 
 const run = async (): Promise<void> => {
   const httpWorked = await runHttpBenchmark({ iterations, concurrency, text });
@@ -142,7 +141,7 @@ const run = async (): Promise<void> => {
   }
 };
 
-run().catch((error) => {
+run().catch(error => {
   console.error(error);
   process.exit(1);
 });

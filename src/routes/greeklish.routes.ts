@@ -1,7 +1,7 @@
+import { greeklishService } from '@/services';
+import { LegacyConvertResponse } from '@/types/api.types';
+import { validateText } from '@/validators/text.validator';
 import { Request, Response, Router } from 'express';
-import { greeklishService } from '../services';
-import { LegacyConvertResponse } from '../types/api.types';
-import { validateText } from '../validators/text.validator';
 
 const router = Router();
 

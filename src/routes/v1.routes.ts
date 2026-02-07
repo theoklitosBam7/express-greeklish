@@ -1,7 +1,7 @@
+import { greeklishService } from '@/services';
+import { ConvertResponse } from '@/types/api.types';
+import { validateText } from '@/validators/text.validator';
 import { Request, Response, Router } from 'express';
-import { greeklishService } from '../services';
-import { ConvertResponse } from '../types/api.types';
-import { validateText } from '../validators/text.validator';
 
 type ConvertRequestBody = {
   text?: unknown;
@@ -9,10 +9,7 @@ type ConvertRequestBody = {
 
 const router = Router();
 
-const handleV1Convert = (
-  req: Request<object, object, ConvertRequestBody>,
-  res: Response<ConvertResponse>
-) => {
+const handleV1Convert = (req: Request<object, object, ConvertRequestBody>, res: Response<ConvertResponse>) => {
   const requestId = res.locals.requestId ?? 'unknown';
   const requestStart = process.hrtime.bigint();
   const text = validateText(req.body?.text);
@@ -36,4 +33,4 @@ router.post('/convert', handleV1Convert);
 
 const v1Routes = router;
 
-export { v1Routes, handleV1Convert };
+export { handleV1Convert, v1Routes };

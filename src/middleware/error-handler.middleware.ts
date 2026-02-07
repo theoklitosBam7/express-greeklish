@@ -1,12 +1,8 @@
+import { HttpError } from '@/errors/http-error';
+import { ErrorResponse } from '@/types/api.types';
 import { NextFunction, Request, Response } from 'express';
-import { HttpError } from '../errors/http-error';
-import { ErrorResponse } from '../types/api.types';
 
-const createErrorBody = (
-  requestId: string,
-  code: HttpError['code'],
-  message: string
-): ErrorResponse => ({
+const createErrorBody = (requestId: string, code: HttpError['code'], message: string): ErrorResponse => ({
   error: {
     code,
     message,

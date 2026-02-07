@@ -1,4 +1,4 @@
-import { createApp } from './app';
+import { createApp } from '@/app';
 
 function start() {
   if (!process.env.NODE_ENV) {

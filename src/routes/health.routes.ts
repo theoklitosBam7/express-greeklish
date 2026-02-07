@@ -1,6 +1,6 @@
+import { greeklishService } from '@/services';
+import { HealthResponse, ReadyzResponse } from '@/types/api.types';
 import { Request, Response, Router } from 'express';
-import { greeklishService } from '../services';
-import { HealthResponse, ReadyzResponse } from '../types/api.types';
 
 const router = Router();
 

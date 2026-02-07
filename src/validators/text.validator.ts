@@ -1,4 +1,4 @@
-import { HttpError } from '../errors/http-error';
+import { HttpError } from '@/errors/http-error';
 
 const MAX_TEXT_LENGTH = 5000;
 

@@ -1,9 +1,9 @@
+import { errorHandler, notFoundHandler } from '@/middleware/error-handler.middleware';
+import { attachRequestContext, requestLogger } from '@/middleware/request-context.middleware';
+import { router } from '@/routes';
+import { healthRoutes } from '@/routes/health.routes';
 import express, { NextFunction, Request, Response } from 'express';
 import path from 'node:path';
-import { errorHandler, notFoundHandler } from './middleware/error-handler.middleware';
-import { attachRequestContext, requestLogger } from './middleware/request-context.middleware';
-import { healthRoutes } from './routes/health.routes';
-import { router } from './routes';
 
 type CreateAppOptions = {
   staticRoot?: string;

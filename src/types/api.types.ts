@@ -1,5 +1,5 @@
-import { ApiErrorCode } from '../errors/http-error';
-import { TokenResult } from '../services/greeklish.service';
+import { ApiErrorCode } from '@/errors/http-error';
+import { TokenResult } from '@/services/greeklish.service';
 
 export type ConvertResponse = {
   input: string;
