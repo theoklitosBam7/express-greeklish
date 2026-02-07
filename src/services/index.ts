@@ -1,3 +1,1 @@
-import greeklishService from './greeklish.service';
-
-export { greeklishService };
+export { greeklishService } from "./greeklish.service";
