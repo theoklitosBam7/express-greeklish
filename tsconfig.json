@@ -3,15 +3,17 @@
     "module": "commonjs",
     "esModuleInterop": true,
     "allowSyntheticDefaultImports": true,
-    "target": "es6",
+    "target": "es2022",
     "moduleResolution": "node",
-    "noImplicitAny": false,
+    "strict": true,
     "sourceMap": true,
-    "outDir": "dist",
+    "skipLibCheck": true,
     "baseUrl": ".",
     "paths": {
-      "*": ["node_modules/*", "src/types/*"]
-    }
+      "@/*": ["src/*"]
+    },
+    "types": ["node", "vitest/globals"]
   },
-  "include": ["./**/*"]
+  "include": ["index.ts", "src/**/*.ts", "src/**/*.d.ts", "tests/**/*.ts", "scripts/**/*.ts", "vitest.config.ts"],
+  "exclude": ["dist"]
 }
