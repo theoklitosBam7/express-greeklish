@@ -125,6 +125,11 @@ console.log(data.output);
 - `pnpm benchmark`: run local benchmark on `POST /api/v1/convert`.
   - Optional env vars: `BENCH_ITERATIONS`, `BENCH_CONCURRENCY`, `BENCH_TEXT`
 
+## Releases and Changelog
+
+The full release/changelog process (Changesets, summary standard, and workflow)
+is documented in `CONTRIBUTING.md`.
+
 ## Documentation
 
 - Quality notes: `docs/quality-notes.md`
