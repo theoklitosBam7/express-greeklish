@@ -1,5 +1,7 @@
 # express-greeklish
 
+[![Ask DeepWiki](https://deepwiki.com/badge.svg)](https://deepwiki.com/theoklitosBam7/express-greeklish)
+
 Express API that converts Greeklish text to Greek and applies token-level spell checking.
 
 ## Requirements
